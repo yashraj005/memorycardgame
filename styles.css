@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .difficulty {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .difficulty label {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  
+  select, button {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    background-color: #4a90e2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 8px;
+    user-select: none;
+    transition: transform 0.4s ease;
+  }
+  
+  .card.flipped {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  
+  #message {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  #resetButton, #startButton {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  #resetButton:hover, #startButton:hover {
+    background-color: #357ab7;
+  }
+  
+  /* Specific styling for the 4x4 grid to make cards larger */
+  .game-board.grid-4x4 .card {
+    width: 120px;
+    height: 120px;
+  }
+  
+  /* Responsive Grid Sizes for 6x6 and larger */
+  .game-board.grid-6x6 .card,
+  .game-board.grid-8x8 .card,
+  .game-board.grid-10x10 .card,
+  .game-board.grid-12x12 .card,
+  .game-board.grid-14x14 .card,
+  .game-board.grid-16x16 .card {
+    width: 60px;
+    height: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    .game-board.grid-4x4 .card {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .game-board.grid-6x6 .card,
+    .game-board.grid-8x8 .card,
+    .game-board.grid-10x10 .card,
+    .game-board.grid-12x12 .card,
+    .game-board.grid-14x14 .card,
+    .game-board.grid-16x16 .card {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .game-board.grid-4x4 .card {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .game-board.grid-6x6 .card,
+    .game-board.grid-8x8 .card,
+    .game-board.grid-10x10 .card,
+    .game-board.grid-12x12 .card,
+    .game-board.grid-14x14 .card,
+    .game-board.grid-16x16 .card {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
